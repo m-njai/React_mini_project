@@ -64,17 +64,17 @@ function Home() {
           <div className="service-card">
             <h5>Virtual Try-On</h5>
             <p>Try on makeup products virtually to find your perfect match.</p>
-            <a href="/register" className="btn btn-secondary">Try Now</a>
+            <a href="/services/try-on" className="btn btn-secondary">Try Now</a>
           </div>
           <div className="service-card">
             <h5>Consult with Experts</h5>
             <p>Get personalized advice from our beauty experts.</p>
-            <a href="/contact" className="btn btn-secondary">Consult Now</a>
+            <a href="/services/consult" className="btn btn-secondary">Consult Now</a>
           </div>
           <div className="service-card">
             <h5>Subscription Box</h5>
             <p>Subscribe to receive a curated box of makeup products every month.</p>
-            <a href="/register" className="btn btn-secondary">Subscribe Now</a>
+            <a href="/services/subscription" className="btn btn-secondary">Subscribe Now</a>
           </div>
         </div>
       </section>
