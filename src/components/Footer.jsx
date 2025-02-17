@@ -3,16 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Footer() {
   return (
-    <footer className="footer bg-light text-center text-lg-start">
+    <footer className="footer">
       <div className="container p-4">
         <div className="row">
-          <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <div className="footer-message">
             <h5 className="text-uppercase">Makeup Store</h5>
             <p>
-              Discover the best makeup products for you. Find the perfect makeup products that suit your style.
-            </p>
+            At our Makeup Store, we believe that makeup is a form of self-expression. 
+            That's why we curate a diverse selection of products to help you create the look you desire. 
+            Whether you're going for a natural everyday look, a bold and glamorous appearance, or anything 
+            in between, you'll find the perfect products to achieve it. Explore our extensive collection of 
+            foundations, powders, brow pencils, and more to enhance your beauty and boost your confidence.</p>
           </div>
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="footer-text">
             <h5 className="text-uppercase">Links</h5>
             <ul className="list-unstyled mb-0">
               <li>
@@ -26,7 +29,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="footer-text">
             <h5 className="text-uppercase">Follow Us</h5>
             <ul className="list-unstyled mb-0">
               <li>

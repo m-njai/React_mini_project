@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';  // Adjust the path to App.css
 
 function Header() {
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">Makeup Store</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <header className="header">
+      <div className="brand-container">
+        <Link className="navbar-brand" to="/">
+          <h1>GLAM MAKEUP STORE</h1>
+        </Link>
+      </div>
+      <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'rosybrown' }}>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">

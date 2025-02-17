@@ -1,4 +1,26 @@
-/* Background styles */
+/* Keyframes for text animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyframes for photo animation */
+@keyframes photoFadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Apply text animation */
+.text-animation {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply photo animation */
+.photo-animation {
+  animation: photoFadeIn 1s ease-in-out;
+}
+
+/* Background styles for the home page */
 .background {
   background-image: url('/src/images/beauty.jpg'); /* Adjust the path if necessary */
   background-size: cover;
@@ -8,13 +30,15 @@
   width: 100%;
   background-color: goldenrod;
 }
-/* Background styles for specific pages */
+
+/* Background styles for other pages */
 .page-background {
   background-image: url('/src/images/models.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 2rem; /* Optional: Adjust padding as needed */
 }
 
 /* Main image styles */
@@ -28,6 +52,26 @@
 .main-content {
   padding: 2rem;
   text-align: center;
+}
+
+/* Product Types styles */
+.product-types {
+  padding: 2rem;
+  text-align: center;
+}
+
+.product-type-card {
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.product-type-card:hover {
+  transform: scale(1.05);
+}
+
+.product-type-card img {
+  height: 200px;
+  object-fit: cover;
 }
 
 /* Featured products styles */
@@ -92,54 +136,49 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar styles */
-.navbar {
-  margin-bottom: 20px;
-color: rosybrown;
-}
-.nav-item {
-  margin-right: 10px;
-  color: rosybrown;
-  padding-left: 50px;
-  padding-bottom: 100px;
-  padding-top: 100px;
-}
-.nav-link {
-  color: #333 !important;
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 0px;
 }
 
-.nav-link:hover {
+.brand-container {
+  background-color: rosybrown;
+  padding: 80px 0;
+}
+
+.navbar {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 18px; /* Adjust font size */
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
   color: #007bff !important;
 }
 
 /* Footer styles */
 .footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  margin-top: 20px;
+  background-color: rosybrown;
+  padding: 40px 0;
+  margin-top: 100px;
 }
 
 .footer .text-dark:hover {
   color: #007bff !important;
 }
 
-/* Home styles */
-.home .jumbotron {
-  background-color: #f8f9fa;
-  padding: 2rem 1rem;
+.footer-text {
+  color: gray;
   text-align: center;
-}
-
-/* Products styles */
-.products .card {
-  transition: transform 0.2s;
-}
-
-.products .card:hover {
-  transform: scale(1.05);
-}
-
-.products .card-img-top {
-  height: 200px;
-  object-fit: cover;
 }

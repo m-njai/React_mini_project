@@ -9,7 +9,7 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Contact from './pages/Contact';
-import MainPage from './pages/MainPage';  // Import the MainPage component
+import Mainproduct from './pages/Mainproducts';  // Import the MainPage component
 import { CartProvider } from './context/CartContext';
 import './App.css';  // Ensure this path is correct
 
@@ -22,7 +22,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/main" element={<MainPage />} />  // Add the MainPage route
+              <Route path="/main" element={<Mainproduct />} />  // Add the MainPage route
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<ProductDetails />} />
               <Route path="/cart" element={<Cart />} />

@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 // List of categories
 const categories = [
-  'All', 'foundation', 'powder', 'brow pencil', 'lipstick', 'eyeshadow', 'mascara',
-  'blush', 'highlighter', 'concealer', 'eyeliner', 'gloss', 'lip liner',
-  'setting spray', 'primer', 'brushes', 'sponges', 'makeup remover', 
-  'nail polish', 'false eyelashes', 'makeup bags'
+  'All', 'blush', 'bronzer', 'eyebrow', 'eyeliner', 'eyeshadow', 'foundation',
+  'lip liner', 'lipstick', 'mascara', 'nail polish'
 ];
 
 function Products() {
