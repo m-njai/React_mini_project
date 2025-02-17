@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
-import Cart from './pages/Cart';
+import CartPage from './pages/CartPage';  // Updated import to CartPage
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Contact from './pages/Contact';
@@ -22,10 +22,10 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/main" element={<Mainproduct />} />  // Add the MainPage route
+              <Route path="/main" element={<Mainproduct />} />  {/* Add the MainPage route */}
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<ProductDetails />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<CartPage />} />  {/* Updated route to CartPage */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/contact" element={<Contact />} />

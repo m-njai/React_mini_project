@@ -6,6 +6,9 @@ import beauty3 from '../images/beauty3.jpg';
 import models from '../images/models.jpg';
 import faceglam from '../images/faceglam.jpg';
 import crownmodel from '../images/crownmodel.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // Bootstrap JS is imported
+import backgroundImage from '../images/background.jpg';
 
 function Home() {
   const productTypes = [
@@ -22,19 +25,17 @@ function Home() {
   ];
 
   return (
-    <div>
-      <div className="background">
-        <div className="main-content text-animation">
-          <h1>Welcome to Our Makeup Store</h1>
-          <h4>
-            Discover the best makeup products for you. Whether you're a makeup enthusiast,
-            a beauty guru, or someone who's just starting their makeup journey, we have everything
-            you need to look and feel fabulous. From radiant foundations that match your skin tone
-            perfectly to silky smooth powders that set your makeup flawlessly, we offer a wide range
-            of high-quality products to suit every style and occasion.
-          </h4>
-          <a className="btn btn-primary" href="/products" role="button">Shop Now</a>
-        </div>
+    <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}>
+      <div className="main-content text-animation">
+        <h1>Welcome to Our Makeup Store</h1>
+        <h4>
+          Discover the best makeup products for you. Whether you're a makeup enthusiast,
+          a beauty guru, or someone who's just starting their makeup journey, we have everything
+          you need to look and feel fabulous. From radiant foundations that match your skin tone
+          perfectly to silky smooth powders that set your makeup flawlessly, we offer a wide range
+          of high-quality products to suit every style and occasion.
+        </h4>
+        <a className="btn btn-primary" href="/products" role="button">Shop Now</a>
       </div>
 
       <section className="product-types">
