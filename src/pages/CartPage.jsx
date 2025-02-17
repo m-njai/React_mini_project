@@ -1,14 +1,19 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'; // Adjust the path if necessary
 import backgroundImage from '../images/background.jpg'; // Import the background image
 
 function CartPage() {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const totalValue = cart.reduce((total, item) => total + parseFloat(item.price), 0); // Ensure price is a number
+
+  const handleCompleteTransaction = () => {
+    navigate('/checkout');
+  };
 
   return (
     <div className="cart-page" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}>
@@ -33,7 +38,7 @@ function CartPage() {
               <h4>Total: ${totalValue.toFixed(2)}</h4>
             </div>
             <button className="btn btn-secondary mb-3" onClick={clearCart}>Clear Cart</button>
-            <Link to="/checkout" className="btn btn-primary">Complete Transaction</Link>
+            <button className="btn btn-primary" onClick={handleCompleteTransaction}>Complete Transaction</button>
           </>
         )}
       </div>
