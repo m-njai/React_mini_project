@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
-import '../App.css';  // Adjust the path to App.css
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../App.css'; // Adjust the path to App.css
+import { UserContext } from '../context/UserContext'; // Import UserContext
 
 function Login() {
+  const { setUser, registeredUsers } = useContext(UserContext); // Use registeredUsers from UserContext
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
+    // Authenticate user
+    const user = registeredUsers.find(user => user.email === email && user.password === password);
+    if (user) {
+      setUser(user);
+      navigate('/');
+      alert(`Welcome ${user.firstName}! Nice to see you.`);
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
     <div className="page-background">
       <div className="container login">
         <h2 className="my-4">Login</h2>
+        {error && <p className="text-danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
